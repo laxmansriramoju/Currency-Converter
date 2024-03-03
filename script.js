@@ -34,7 +34,6 @@ function exchageRate(){
         return responce.json()
     })
     .then((jsonData)=>{
-        console.log(jsonData)
         let exchange=jsonData[toCurr.value.toLowerCase()];
         result.textContent=`${amount.value} ${fromCurr.value} = ${exchange*amount.value} ${toCurr.value}`;
     });
